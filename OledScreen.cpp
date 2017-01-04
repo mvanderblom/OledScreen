@@ -13,9 +13,6 @@ void OledScreen::debug() {
 }
 
 void OledScreen::init() {
-	pinMode(_clockPin, OUTPUT);
-	pinMode(_dataPin, OUTPUT);
-
 	Wire.begin();
 	_oled.begin(&Adafruit128x64, _i2cAddress);
 	_oled.set400kHz();
@@ -23,10 +20,8 @@ void OledScreen::init() {
 	_oled.clear();
 
 	if (_debug) {
-		Serial.print("Initialized OledScreen on dataPin: ");
-		Serial.print(_dataPin);
-		Serial.print(", clockPin: ");
-		Serial.println(_clockPin);
+		Serial.print("Initialized OledScreen on i2cAddress: ");
+		Serial.println(_i2cAddress);
 	}
 }
 
