@@ -13,7 +13,7 @@ class OledScreen
 		void value(String value);
 		void status(String status);
 	private:
-		boolean _debug = false;
+		bool _debug = false;
 		int _i2cAddress;
 		SSD1306AsciiWire _oled;
 		const String _fill = "                              ";
