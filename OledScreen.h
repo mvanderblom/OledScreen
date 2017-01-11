@@ -3,6 +3,7 @@
 
 #include "SSD1306AsciiWire.h"
 
+// Uses pin A4 for data and A5 for clock
 class OledScreen
 {
 	public:
