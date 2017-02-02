@@ -8,10 +8,6 @@ OledScreen::OledScreen(int i2cAddress) {
 	this->_i2cAddress = i2cAddress;
 }
 
-void OledScreen::debug() {
-	this->_debug = true;
-}
-
 void OledScreen::init() {
 	Wire.begin();
 	_oled.begin(&Adafruit128x64, _i2cAddress);
@@ -19,10 +15,8 @@ void OledScreen::init() {
 	_oled.setFont(Arial14);
 	_oled.clear();
 
-	if (_debug) {
-		Serial.print("Initialized OledScreen on i2cAddress: ");
-		Serial.println(_i2cAddress);
-	}
+//	Serial.print("Initialized OledScreen on i2cAddress: ");
+//	Serial.println(_i2cAddress);
 }
 
 void OledScreen::title(String title) {
