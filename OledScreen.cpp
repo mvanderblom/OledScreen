@@ -1,8 +1,8 @@
-#include "Arduino.h"
-#include "OledScreen.h"
-#include "Wire.h"
-#include "SSD1306Ascii.h"
-#include "SSD1306AsciiWire.h"
+#include <Arduino.h>
+#include <OledScreen.h>
+#include <Wire.h>
+#include <SSD1306Ascii.h>
+#include <SSD1306AsciiWire.h>
 
 OledScreen::OledScreen(int i2cAddress) {
 	this->_i2cAddress = i2cAddress;
